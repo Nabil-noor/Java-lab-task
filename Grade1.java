@@ -5,9 +5,9 @@ class Grade1 {
     private String name;
     private int roll;
     private double[] marks;
-    private String grade; // Changed from char to String for detailed grading
+    private String grade; 
 
-    // Constructor
+    
     public Grade1(String name, int roll, double[] marks) {
         this.name = name;
         this.roll = roll;
@@ -15,7 +15,7 @@ class Grade1 {
         this.grade = calculateGrade();
     }
 
-    // Method to calculate average marks
+    
     private double calculateAverage() {
         double sum = 0;
         for (double mark : marks) {
@@ -24,7 +24,7 @@ class Grade1 {
         return sum / marks.length;
     }
 
-    // Method to calculate grade based on average marks with more grading categories
+    
     private String calculateGrade() {
         double avgMarks = calculateAverage();
         if (avgMarks >= 95) return "A+";
@@ -37,7 +37,7 @@ class Grade1 {
         else return "F";
     }
 
-    // Method to display student details
+    
     public void display() {
         System.out.println("Student Name: " + name);
         System.out.println("Roll Number: " + roll);
@@ -50,15 +50,15 @@ class Grade1 {
     }
 
     public static void main(String[] args) {
-        // Sample data (multiple marks for a student)
+        
         String studentName = "nabil";
         int rollNumber = 101;
-        double[] studentMarks = {80, 77, 60, 80, 61}; // Example marks in different subjects
+        double[] studentMarks = {80, 77, 60, 80, 61}; 
 
-        // Creating an object of Grade class
+        
         Grade student = new Grade(studentName, rollNumber, studentMarks);
 
-        // Displaying student details and grade
+        
         student.display();
     }
 }
